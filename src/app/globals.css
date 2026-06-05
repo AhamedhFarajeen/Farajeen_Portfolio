@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #000000;
+  --surface: #08090b;
+  --surface2: #0f1115;
+  --text: #f7f7f2;
+  --muted: #a6abb4;
+  --stroke: #242833;
+  --soft-stroke: rgba(255, 255, 255, 0.14);
+  --accent1: #89aacc;
+  --accent2: #4e85bf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  background-image: radial-gradient(
+    circle at 50% -10rem,
+    rgba(78, 133, 191, 0.2),
+    rgba(0, 0, 0, 0) 34rem
+  );
+}
+
+body.has-magnetic-cursor,
+body.has-magnetic-cursor a,
+body.has-magnetic-cursor button,
+body.has-magnetic-cursor [role='button'] {
+  cursor: none;
+}
+
+body.has-magnetic-cursor .is-magnetic {
+  translate: var(--magnetic-x, 0) var(--magnetic-y, 0);
+}
+
+.font-display {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes nameReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes roleFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: -40%;
+  }
+  100% {
+    top: 140%;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes wordIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.border-gradient:hover::before {
+  opacity: 1;
+}

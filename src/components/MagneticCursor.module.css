@@ -1,0 +1,63 @@
+.cursor,
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.cursor {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(137, 170, 204, 0.7);
+  border-radius: 9999px;
+  mix-blend-mode: difference;
+  transition:
+    width 0.22s ease,
+    height 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    opacity 0.18s ease;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--accent1);
+  box-shadow: 0 0 18px rgba(137, 170, 204, 0.45);
+  transition: opacity 0.18s ease;
+}
+
+.cursor[data-hovering='true'] {
+  width: 64px;
+  height: 64px;
+  border-color: rgba(137, 170, 204, 0.35);
+  background: rgba(137, 170, 204, 0.1);
+}
+
+.cursor[data-pressed='true'] {
+  width: 34px;
+  height: 34px;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor,
+  .dot {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor,
+  .dot {
+    display: none;
+  }
+}
