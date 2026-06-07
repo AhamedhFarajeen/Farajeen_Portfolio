@@ -14,7 +14,10 @@
   height: 42px;
   border: 1px solid rgba(137, 170, 204, 0.7);
   border-radius: 9999px;
-  mix-blend-mode: difference;
+  background: rgba(137, 170, 204, 0.035);
+  box-shadow:
+    0 0 22px rgba(137, 170, 204, 0.22),
+    inset 0 0 18px rgba(137, 170, 204, 0.08);
   transition:
     width 0.22s ease,
     height 0.22s ease,
@@ -32,6 +35,11 @@
   transition: opacity 0.18s ease;
 }
 
+:global(body.has-magnetic-cursor) .cursor,
+:global(body.has-magnetic-cursor) .dot {
+  opacity: 1;
+}
+
 .cursor[data-hovering='true'] {
   width: 64px;
   height: 64px;
@@ -46,13 +54,6 @@
 
 .hidden {
   opacity: 0 !important;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .cursor,
-  .dot {
-    opacity: 1;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

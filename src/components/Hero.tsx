@@ -5,10 +5,9 @@ import { useEffect, useState } from 'react';
 import styles from './Hero.module.css';
 
 const roles = [
-  'Full-Stack Developer',
-  'Software Engineer',
-  'Tech Enthusiast',
-  'Problem Solver',
+  'Software Engineering Undergraduate',
+  ' ',
+  'Looking for Internships',
 ];
 
 export default function Hero() {
@@ -46,18 +45,18 @@ export default function Hero() {
           </span>
         </p>
         <p className={styles['hero-desc']}>
-          I&apos;m a Full-stack developer building modern web applications with
-          interactive user experiences, and scalable backend systems. Enjoy
-          building products that not only function efficiently but also create
-          seamless and meaningful experiences for users.
+          I&apos;m a Software Engineering undergraduate focused on building
+          practical web applications, learning scalable software development,
+          and growing through real-world projects that solve clear user needs.
         </p>
         <div className={styles['hero-btns']}>
           <Link
-            href="/projects"
+            href="/#projects"
             className={styles['btn-solid']}
           >
-            See Projects
+            View My Projects
           </Link>
+          
           <a
             href="/Resume.pdf"
             download="Ahamedh_Farajeen_Resume.pdf"

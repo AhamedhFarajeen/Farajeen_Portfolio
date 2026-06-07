@@ -7,7 +7,7 @@
     radial-gradient(circle at 14% 10%, rgba(78, 133, 191, 0.18), transparent 30rem),
     radial-gradient(circle at 86% 26%, rgba(137, 170, 204, 0.1), transparent 28rem),
     var(--bg);
-  border-top: 1px solid var(--soft-stroke);
+  scroll-margin-top: 5rem;
 }
 
 
@@ -215,7 +215,10 @@
   font: inherit;
   outline: none;
   resize: vertical;
-  transition: border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
 }
 
 .field textarea {
@@ -229,9 +232,11 @@
 
 .field input:focus,
 .field textarea:focus {
-  border-color: rgba(137, 170, 204, 0.64);
-  background: rgba(137, 170, 204, 0.07);
-  box-shadow: 0 0 0 4px rgba(137, 170, 204, 0.1);
+  border-color: rgba(137, 170, 204, 0.72);
+  background: rgba(137, 170, 204, 0.075);
+  box-shadow:
+    0 0 0 4px rgba(137, 170, 204, 0.11),
+    0 16px 34px rgba(78, 133, 191, 0.14);
 }
 
 .submit-btn {

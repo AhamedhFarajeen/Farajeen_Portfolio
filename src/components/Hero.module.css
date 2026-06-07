@@ -6,6 +6,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 0 1.5rem;
+  scroll-margin-top: 5rem;
 }
 
 .hero-bg {
@@ -173,12 +174,35 @@
 }
 
 .hero-btns {
-  display: inline-flex;
+  display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
   opacity: 0;
   animation: blurIn 1s ease forwards 1.1s;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: flex-start;
+    min-height: 100svh;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-content {
+    margin: auto 0;
+  }
+
+  .hero-btns {
+    width: 100%;
+  }
+
+  .btn-solid,
+  .btn-outline {
+    width: min(100%, 21rem);
+    text-align: center;
+  }
 }
 
 .btn-solid {

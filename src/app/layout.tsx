@@ -20,13 +20,13 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Ahamedh Farajeen - Software Engineer',
+  title: 'Ahamedh Farajeen - Software Engineering Undergraduate',
   description:
-    'Full-stack developer and software engineering student at SLIIT. Building practical applications from e-commerce platforms to learning management systems.',
+    'Software Engineering undergraduate at SLIIT building practical web applications and seeking Software Engineering Internship opportunities.',
   openGraph: {
-    title: 'Ahamedh Farajeen - Software Engineer',
+    title: 'Ahamedh Farajeen - Software Engineering Undergraduate',
     description:
-      'Full-stack developer and software engineering student at SLIIT.',
+      'Software Engineering undergraduate at SLIIT building practical web applications.',
     type: 'website',
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <meta
           name="viewport"

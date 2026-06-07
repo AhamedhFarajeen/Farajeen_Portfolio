@@ -54,7 +54,7 @@ export default function Contact() {
           <aside className={styles.sidebar}>
             <div className={styles.status}>
               <span></span>
-              Open to Work
+              Open to Internships
             </div>
 
             <p className={styles.intro}>
@@ -97,7 +97,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={6}
-                placeholder="Tell me what you have in mind..."
+                placeholder="Share an internship opportunity, project context, or how I can help..."
                 required
               ></textarea>
             </label>

@@ -8,7 +8,7 @@
     radial-gradient(circle at 82% 24%, rgba(137, 170, 204, 0.1), transparent 28rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 26rem),
     var(--bg);
-  border-top: 1px solid var(--soft-stroke);
+  scroll-margin-top: 5rem;
 }
 
 .projects::before {

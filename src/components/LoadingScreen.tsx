@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import styles from './LoadingScreen.module.css';
 
-const words = ['Learning', 'Through', 'Building'];
+const words = ['Learning', 'Through', 'Building', 'Better'];
 
 export default function LoadingScreen() {
   const [isLoaded, setIsLoaded] = useState(false);

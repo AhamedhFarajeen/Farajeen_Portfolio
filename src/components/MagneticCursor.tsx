@@ -125,17 +125,17 @@ export default function MagneticCursor() {
         const distanceX = pointer.x - centerX;
         const distanceY = pointer.y - centerY;
 
-        nextCursorX = pointer.x - distanceX * 0.42;
-        nextCursorY = pointer.y - distanceY * 0.42;
+        nextCursorX = pointer.x - distanceX * 0.46;
+        nextCursorY = pointer.y - distanceY * 0.46;
 
-        activeTarget.style.setProperty('--magnetic-x', `${distanceX * 0.12}px`);
-        activeTarget.style.setProperty('--magnetic-y', `${distanceY * 0.12}px`);
+        activeTarget.style.setProperty('--magnetic-x', `${distanceX * 0.14}px`);
+        activeTarget.style.setProperty('--magnetic-y', `${distanceY * 0.14}px`);
       }
 
-      cursorPosition.x += (nextCursorX - cursorPosition.x) * 0.18;
-      cursorPosition.y += (nextCursorY - cursorPosition.y) * 0.18;
-      dotPosition.x += (pointer.x - dotPosition.x) * 0.42;
-      dotPosition.y += (pointer.y - dotPosition.y) * 0.42;
+      cursorPosition.x += (nextCursorX - cursorPosition.x) * 0.3;
+      cursorPosition.y += (nextCursorY - cursorPosition.y) * 0.3;
+      dotPosition.x += (pointer.x - dotPosition.x) * 0.62;
+      dotPosition.y += (pointer.y - dotPosition.y) * 0.62;
 
       cursor.style.transform = `translate3d(${cursorPosition.x}px, ${cursorPosition.y}px, 0) translate(-50%, -50%)`;
       dot.style.transform = `translate3d(${dotPosition.x}px, ${dotPosition.y}px, 0) translate(-50%, -50%)`;

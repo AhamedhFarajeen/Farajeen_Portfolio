@@ -25,7 +25,7 @@ export const projects: PortfolioProject[] = [
     cardTitle: 'MERN E-Commerce',
     cardSubtitle: 'Platform',
     description:
-      'A full-stack e-commerce web application built with the MERN stack. It includes product browsing, shopping cart, authentication, checkout flow, and a clean responsive UI.',
+      'A MERN e-commerce application built to practice real product workflows, including product browsing, shopping cart behavior, authentication, checkout, and responsive UI development.',
     problemSolved:
       'Many small businesses need a simple platform to sell products online. This project solves that problem by providing a complete storefront and admin management system.',
     image: '/projects/e-commerce.png',
@@ -40,7 +40,7 @@ export const projects: PortfolioProject[] = [
       'Full-stack architecture connecting React UI with Node, Express, and MongoDB.',
     ],
     recruiterFocus:
-      'This project demonstrates my ability to build a complete customer-facing product, connect frontend and backend systems, manage application state, and integrate third-party payment services. It shows practical full-stack thinking across UI, API design, data persistence, authentication, and deployment.',
+      'This project demonstrates internship-relevant full-stack practice: connecting frontend and backend systems, managing application state, integrating payments, and thinking through customer-facing product flows.',
     githubUrl: 'https://github.com/AhamedhFarajeen/E_Commerce_Webapp',
     liveDemoUrl: 'https://e-commerce-frontend-wheat-ten.vercel.app/',
   },
@@ -52,7 +52,7 @@ export const projects: PortfolioProject[] = [
     cardTitle: 'Learning Management',
     cardSubtitle: 'System',
     description:
-      'A modern LMS platform built using the MERN stack. It allows users to explore courses, manage learning content, and provides a clean educational platform experience.',
+      'A MERN learning platform built to explore course discovery, learning content workflows, authentication, media handling, and clean educational product design.',
     problemSolved:
       'This platform helps educators publish courses online and allows students to enroll, watch lessons, and track their learning progress.',
     image: '/projects/LMS.png',
@@ -67,7 +67,7 @@ export const projects: PortfolioProject[] = [
       'MERN stack structure with a scalable separation between UI, API, and data.',
     ],
     recruiterFocus:
-      'This project highlights my ability to design platform-style web applications with authentication, media management, and structured content flows. It demonstrates comfort with full-stack JavaScript, third-party service integration, and building clean user experiences for education-focused products.',
+      'This project highlights my growing ability to design platform-style web applications with authentication, media management, and structured content flows using full-stack JavaScript.',
     githubUrl: 'https://github.com/AhamedhFarajeen/LMS',
     liveDemoUrl: 'https://lms-frontend-seven-eta.vercel.app/',
   },
@@ -79,7 +79,7 @@ export const projects: PortfolioProject[] = [
     cardTitle: 'StarVote Reality',
     cardSubtitle: 'Voting System',
     description:
-      'A reality show voting system built with Java Servlet, JSP, Bootstrap, and SQL. It allows users to vote for contestants, view live leaderboards, manage contests, and provides a secure voting experience.',
+      'A Java Servlet and JSP voting system built to practice server-rendered web development, SQL-backed data handling, voting workflows, leaderboards, and role-aware application logic.',
     problemSolved:
       'This system helps reality show organizers manage contestants, collect audience votes, and display voting results in a structured and transparent way.',
     image: '/projects/starvote.png',
@@ -94,7 +94,7 @@ export const projects: PortfolioProject[] = [
       'Java Servlet and JSP implementation with Bootstrap-based responsive UI.',
     ],
     recruiterFocus:
-      'This project shows my backend and server-rendered Java web development skills, including SQL database design, request handling, session-style workflows, and practical application logic. It demonstrates that I can work beyond JavaScript stacks and build structured systems using traditional enterprise web technologies.',
+      'This project shows internship-relevant backend practice with Java web technologies, including SQL database design, request handling, session-style workflows, and structured application logic beyond JavaScript stacks.',
     githubUrl: 'https://github.com/AhamedhFarajeen/StarVote_Voting_System',
   },
 ];

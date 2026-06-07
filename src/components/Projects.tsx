@@ -17,20 +17,20 @@ export default function Projects() {
               Featured <em>projects</em>
             </h2>
             <p className={styles['section-sub']}>
-              Real-world applications built from concept to deployment — spanning
-              web development, system design, and full-stack engineering.
+              Practical software projects built while strengthening my frontend,
+              backend, database, and product problem-solving skills.
             </p>
           </div>
           <Link
-            href="/contact"
+            href="/#contact"
             className={styles['view-all']}
           >
-            Contact me →
+            Internship contact →
           </Link>
         </div>
 
         <div className={styles['projects-grid']}>
-          {projects.map((proj) => (
+          {projects.map((proj, index) => (
             <div key={proj.slug} className={styles['proj-card']}>
               <div className={styles['proj-visual']}>
                 <div className={styles['proj-pattern']}></div>
@@ -44,6 +44,7 @@ export default function Projects() {
                   fill
                   sizes="(max-width: 700px) 100vw, 50vw"
                   className={styles['proj-image']}
+                  priority={index === 0}
                 />
               </div>
               <div className={styles['proj-info']}>
@@ -74,8 +75,9 @@ export default function Projects() {
                 More projects <em>coming soon</em>
               </div>
               <p className={styles['proj-desc']}>
-                Pursuing BSc (Hons) in IT at SLIIT — expected 2028. Always
-                building, learning, and shipping new ideas.
+                Pursuing BSc Software Engineering at SLIIT, expected 2028.
+                Continuously building project experience for internship-ready
+                software development.
               </p>
               <div className={styles['availability']}>
                 <div className={styles['avail-dot']}></div>

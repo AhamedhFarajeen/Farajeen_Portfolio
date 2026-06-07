@@ -4,64 +4,67 @@ import styles from './About.module.css';
 
 const profileDetails = [
   ['Name', 'A F Ahamedh Farajeen'],
-  ['Role', 'Full-Stack Developer'],
+  ['Role', 'Software Engineering Intern'],
   ['University', 'SLIIT'],
   ['Degree', 'BSc Software Engineering'],
-  ['Current', 'Year 2, Semester 2'],
+  ['Current', 'Year 3, Semester 1'],
   ['Location', 'Sri Lanka'],
-  ['Status', 'Open to work'],
+  ['Status', 'Open to internship opportunities'],
 ];
 
-const skills = [
+const timeline = [
   {
-    name: 'React.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    year: '2023',
+    title: 'Completed A/L',
   },
   {
-    name: 'JavaScript',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    year: '2024',
+    title: 'Started Computing at SLIIT',
   },
   {
-    name: 'Node.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    year: '2025',
+    title: 'Selected for Software Engineering Specialization',
   },
   {
-    name: 'Express.js',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-    darkLogo: true,
+    year: 'Present',
+    title: 'Searching for Software Engineering Internships',
+  },
+];
+
+const skillGroups = [
+  {
+    title: 'Frontend Development',
+    skills: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
   },
   {
-    name: 'MongoDB',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    title: 'Backend Development',
+    skills: ['Node.js', 'Express.js', 'Java', 'JSP', 'Servlets'],
   },
   {
-    name: 'SQL',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    title: 'Database',
+    skills: ['MongoDB', 'MySQL'],
   },
   {
-    name: 'Java',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    title: 'Software Engineering Concepts',
+    skills: [
+      'REST APIs',
+      'MVC Architecture',
+      'Authentication',
+      'CRUD Operations',
+      'Session Handling',
+      'Role-Based Access',
+    ],
   },
   {
-    name: 'JSP / Servlets',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg',
+    title: 'Tools & Platforms',
+    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Stripe', 'Clerk', 'Cloudinary'],
   },
   {
-    name: 'Bootstrap',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-  },
-  {
-    name: 'Git & GitHub',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-    darkLogo: true,
-  },
-  {
-    name: 'Cloudinary',
-    logo: 'https://cdn.simpleicons.org/cloudinary/3448C5',
-  },
-  {
-    name: 'Clerk',
-    logo: 'https://cdn.simpleicons.org/clerk/6C47FF',
+    title: 'Currently Learning',
+    skills: [
+      'Next.js',
+      
+    ],
   },
 ];
 
@@ -75,6 +78,14 @@ const activities = [
     title: 'AIESEC of SLIIT',
     role: 'Member',
     period: 'Feb 2025 - Jan 2026',
+  },
+];
+
+const certifications = [
+  {
+    title: 'Python for Beginners',
+    issuer: 'E-Certificate',
+    href: '/certificates/python-for-beginners-certificate.pdf',
   },
 ];
 
@@ -100,28 +111,26 @@ export default function About() {
               <span className={styles['eyebrow-text']}>About Me</span>
             </div>
 
-            <h1 className={styles.heading}>Driven to Achieve More</h1>
+            <h1 className={styles.heading}>Driven to<br />Achieve More</h1>
 
             <div className={styles.copy}>
               <p>
                 I&apos;m A F Ahamedh Farajeen, a Software Engineering undergraduate
                 at SLIIT focused on building practical web applications with clean
-                interfaces, backend APIs, authentication, databases, and deployment.
+                interfaces, backend APIs, authentication, databases, and real
+                product workflows.
               </p>
               
               <p>
-                Worked with Java, JavaScript, Python, and related technologies
-                through university and personal projects. I’m not someone who
-                claims to know everything, but I’m always ready to learn,
-                improve, and grow with every opportunity.
+                Worked with Java, JavaScript, Python, and related technologies through university and personal projects. I’m not someone who claims to know everything, but I’m always ready to learn, improve, and grow with every opportunity.
               </p>
             </div>
 
             <div className={styles.actions}>
-              <Link href="/projects" className={styles['primary-btn']}>
-                View Projects
+              <Link href="/#projects" className={styles['primary-btn']}>
+                Explore My Work
               </Link>
-              <Link href="/contact" className={styles['secondary-btn']}>
+              <Link href="/#contact" className={styles['secondary-btn']}>
                 Contact Me
               </Link>
             </div>
@@ -135,52 +144,88 @@ export default function About() {
             <h2>Beyond the Code</h2>
           </div>
           <p>
-            I’m still growing as a developer, but I care about building things
+            I’m still growing as a student, but I care about building things
             with purpose. Every project I work on teaches me something new —
             from solving bugs and improving design to writing cleaner code and
-            understanding how users interact with a system. I’m excited to keep
-            learning, building, and sharing my journey as I grow in this field.
+            understanding how users interact with a system. I’m excited to learn
+            from engineering teams, contribute with consistency, and keep building
+            toward stronger real-world software products.
           </p>
         </section>
 
-        <div className={styles['details-grid']}>
-          <div className={styles['profile-card']}>
-            <div className={styles['card-heading']}>
-              <span>Profile</span>
-              <strong>Open to Work</strong>
+        <section id="skills" className={styles['credentials-panel']}>
+          <div className={styles['credentials-header']}>
+            <div className={styles['profile-block']}>
+              <div className={styles['card-heading']}>
+                <span>Profile</span>
+                
+              </div>
+              <div className={styles['profile-list']}>
+                {profileDetails.map(([label, value]) => (
+                  <div key={label} className={styles['profile-row']}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className={styles['profile-list']}>
-              {profileDetails.map(([label, value]) => (
-                <div key={label} className={styles['profile-row']}>
-                  <span>{label}</span>
-                  <strong>{value}</strong>
-                </div>
-              ))}
+
+            <div className={styles['timeline-block']}>
+              
+              <div className={styles.timeline}>
+                {timeline.map((item) => (
+                  <div key={item.year} className={styles['timeline-item']}>
+                    <span>{item.year}</span>
+                    <strong>{item.title}</strong>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className={styles['skills-card']}>
-            <div className={styles['card-heading']}>
-              <span>Skills</span>
-              
-            </div>
-            <div className={styles['skill-list']}>
-              {skills.map((skill) => (
-                <span key={skill.name} className={styles['skill-chip']}>
-                  <span className={styles['skill-logo-wrap']}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={skill.logo}
-                      alt={`${skill.name} logo`}
-                      className={skill.darkLogo ? styles['dark-logo'] : undefined}
-                    />
-                  </span>
-                  <span>{skill.name}</span>
-                </span>
-              ))}
-            </div>
+          <div className={styles['skills-heading']}>
+            <span>Skills</span>
+            
           </div>
-        </div>
+
+          <div className={styles['skill-groups']}>
+            {skillGroups.map((group) => (
+              <article key={group.title} className={styles['skill-group']}>
+                <h3>{group.title}</h3>
+                <div className={styles['skill-list']}>
+                  {group.skills.map((skill) => (
+                    <span key={skill} className={styles['skill-chip']}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles['certification-section']}>
+          <div className={styles['card-heading']}>
+            <span>Certifications</span>
+          </div>
+          <div className={styles['certification-list']}>
+            {certifications.map((certification) => (
+              <article key={certification.title} className={styles['certification-item']}>
+                <div>
+                  <span>{certification.issuer}</span>
+                  <h3>{certification.title}</h3>
+                </div>
+                <a
+                  href={certification.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certificate
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section className={styles['activity-section']}>
           <div className={styles['card-heading']}>
@@ -202,14 +247,14 @@ export default function About() {
         </section>
 
         <div className={styles.cta}>
-          <h2>Want to see what I can build?</h2>
-          <p>Explore my projects or reach out for internships, junior roles, and collaborations.</p>
+          <h2>Looking for a Software Engineering Intern?</h2>
+          <p>Explore my projects or reach out about internship opportunities where I can learn, contribute, and build practical software with a team.</p>
           <div className={styles.actions}>
-            <Link href="/projects" className={styles['primary-btn']}>
-              Projects
+            <Link href="/#projects" className={styles['primary-btn']}>
+              View My Projects
             </Link>
-            <Link href="/contact" className={styles['secondary-btn']}>
-              Contact
+            <Link href="/#contact" className={styles['secondary-btn']}>
+              Contact Me
             </Link>
           </div>
         </div>
