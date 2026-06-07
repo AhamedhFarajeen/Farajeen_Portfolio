@@ -74,11 +74,7 @@ export default function Projects() {
               <div className={styles['proj-title']} style={{ fontSize: '1.8rem' }}>
                 More projects <em>coming soon</em>
               </div>
-              <p className={styles['proj-desc']}>
-                Pursuing BSc Software Engineering at SLIIT, expected 2028.
-                Continuously building project experience for internship-ready
-                software development.
-              </p>
+             
               <div className={styles['availability']}>
                 <div className={styles['avail-dot']}></div>
                 <span>Available for internships & projects</span>
