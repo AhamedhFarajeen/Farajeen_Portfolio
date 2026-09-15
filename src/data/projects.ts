@@ -8,6 +8,7 @@ export type PortfolioProject = {
   description: string;
   problemSolved: string;
   image: string;
+  imagePosition?: string;
   gradient: string;
   tech: string[];
   features: string[];
@@ -96,6 +97,42 @@ export const projects: PortfolioProject[] = [
     recruiterFocus:
       'This project shows internship-relevant backend practice with Java web technologies, including SQL database design, request handling, session-style workflows, and structured application logic beyond JavaScript stacks.',
     githubUrl: 'https://github.com/AhamedhFarajeen/StarVote_Voting_System',
+  },
+  {
+    slug: 'project-management',
+    href: '/projects/project-management',
+    tag: 'Full-Stack · Productivity',
+    title: 'Project Management Application',
+    cardTitle: 'Project Management',
+    cardSubtitle: 'Application',
+    description:
+      'A full-stack project and task management workspace built with Next.js and Express, featuring authenticated collaboration, flexible project views, task assignment, search, and progress tracking.',
+    problemSolved:
+      'Project teams need a focused place to organize work, understand priorities, and collaborate without losing context. This application brings projects, tasks, people, timelines, files, and progress into one connected workspace.',
+    image: '/projects/project-management.png',
+    imagePosition: 'center 42%',
+    gradient:
+      'linear-gradient(135deg,rgba(137,170,204,0.28),rgba(78,133,191,0.12))',
+    tech: [
+      'Next.js',
+      'Express.js',
+      'PostgreSQL',
+      'Prisma',
+      'Tailwind CSS',
+      'Clerk',
+    ],
+    features: [
+      'Clerk-powered sign-up, sign-in, sign-out, and profile management.',
+      'Board, table, list, priority, and timeline views for project work.',
+      'Detailed task creation with dates, labels, descriptions, priorities, and multiple assignees.',
+      'Search across users, projects, and tasks from one workspace.',
+      'Team collaboration through comments, attachments, task progress, and personal dashboards.',
+    ],
+    recruiterFocus:
+      'This project demonstrates full-stack product engineering across a Next.js frontend, Express API, authenticated requests, RTK Query data flows, and a relational PostgreSQL schema managed with Prisma.',
+    githubUrl: 'https://github.com/AhamedhFarajeen/project-management',
+    liveDemoUrl:
+      'https://project-management-ri5oz4jdr-farajeens-projects.vercel.app/',
   },
 ];
 

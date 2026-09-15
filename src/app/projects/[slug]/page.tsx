@@ -18,12 +18,16 @@ const techLogos: Record<string, string> = {
   Java: '☕',
   JSP: 'JSP',
   MongoDB: 'M',
+  'Next.js': 'N',
   'Node.js': '⬢',
+  PostgreSQL: 'PG',
+  Prisma: 'P',
   React: '⚛',
   'React.js': '⚛',
   Servlet: 'S',
   SQL: 'DB',
   Stripe: 'S',
+  'Tailwind CSS': 'TW',
 };
 
 export function generateStaticParams() {
@@ -83,6 +87,8 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
               sizes="(max-width: 860px) 100vw, 50vw"
               className={styles.image}
               priority
+              quality={95}
+              style={{ objectPosition: project.imagePosition ?? 'center' }}
             />
           </div>
         </section>
